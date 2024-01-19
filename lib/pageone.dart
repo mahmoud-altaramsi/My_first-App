@@ -8,6 +8,7 @@ import 'sochial.dart';
 // ignore: duplicate_import, unused_import
 import 'gamegrid.dart';
 import 'gamevs.dart';
+import 'sochiallink.dart';
 
 // ignore: must_be_immutable
 class PageOne extends StatelessWidget {
@@ -92,25 +93,7 @@ class PageOne extends StatelessWidget {
                       ),
                     ),
                   ]),
-              Container(
-                height: 260,
-                width: double.infinity,
-                // color: Colors.black,
-                // margin: EdgeInsets.all(),
-                child: GridView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  itemCount: ListOfSochial.length,
-                  shrinkWrap: true,
-                  padding: EdgeInsets.all(5),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 3),
-                  itemBuilder: (context, index) {
-                    return Sochial(
-                        imageSochial: ListOfSochial.keys.toList()[index],
-                        linkSochial: ListOfSochial.values.toList()[index]);
-                  },
-                ),
-              ),
+              SochialLink(ListOfSochial: ListOfSochial),
               Container(
                 color: Color.fromARGB(255, 255, 204, 112),
                 width: double.infinity,
