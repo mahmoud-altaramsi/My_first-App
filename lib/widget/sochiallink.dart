@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:vapp/screentow.dart';
 
 // ignore: must_be_immutable
 class IconSochial extends StatelessWidget {
@@ -18,9 +17,19 @@ class IconSochial extends StatelessWidget {
         ),
       ),
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => ScreenTow(url: linkIcons)),
+        showModalBottomSheet(
+          backgroundColor: Colors.deepPurple,
+          context: context,
+          builder: (context) => ElevatedButton(
+            style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Colors.deepOrange)),
+            onPressed: () {
+              launchUrl(
+                Uri.parse(linkIcons),
+              );
+            },
+            child: Text('Go To $icon'),
+          ),
         );
       },
     );

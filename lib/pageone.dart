@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:vapp/screentow.dart';
 import 'widget/sochiallink.dart';
 
 // ignore: must_be_immutable
@@ -30,7 +29,7 @@ class PageOne extends StatelessWidget {
                 height: 65,
               ),
               CircleAvatar(
-                backgroundImage: AssetImage('assets/circelGamal.jpeg'),
+                backgroundImage: AssetImage('assets/fac.png'),
                 backgroundColor: Colors.pink,
                 radius: 60,
               ),
